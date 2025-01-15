@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started - Dog Adoption Web App Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>DAT515 Project - Dog Adoption Web Application Documentation</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="getting_started.html">Getting Started</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="flask_api.html">Flask Rest API</a>
+            <a href="react_frontend.html">React Frontend</a>
+            <a href="database.html">Database</a>
+            <a href="tests.html">Tests</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Flask Rest API </h2>
+        <p>In this page you can find an overview of Flask Rest API</p>
+        <h3>Functions </h3>
+        <ol>
+            <li>
+                <h4>get_dogs_db()</h4>
+                <p><i>Task:</i> Retrieves all dog records from the database and returns them as JSON.<br>
+                <i>Arguments:</i> None<br>
+                <i>Output:</i> Database results as JSON<br>
+                <i>Database Interaction:</i> Connects to MySQL, fetches data, then closes the connection.<br>
+                <i>Error Handling:</i> If a database error occurs, it returns a JSON error response with a 500 status code.</p>
+            </li>
+        </ol>
+        <h3>Endpoints</h3>
+        <ol>
+    <li>
+        <h4>/test_db</h4>
+        <p><i>Method:</i> GET<br>
+        <i>Description:</i> A testing endpoint that returns the list of dogs using the <code>get_dogs_db()</code> function.<br>
+        <i>Response:</i> JSON object containing dog data or an error message (500 status code).</p>
+    </li>
+
+    <li>
+        <h4>/api/dogs</h4>
+        <p><i>Method:</i> GET<br>
+        <i>Description:</i> Retrieves all dog records from the database and returns them in JSON format.<br>
+        <i>Response:</i> JSON object containing dog data or an error message with (500 status code).</p>
+    </li>
+
+    <li>
+        <h4>/api/adoption</h4>
+        <p><i>Method:</i> POST<br>
+        <i>Description:</i> Adds a new dog adoption record to the database.<br>
+        <i>Request Body:</i><br>
+        <ul>
+            <li><code>dogName</code>: Name of the dog.</li>
+            <li><code>breed</code>: Breed of the dog.</li>
+            <li><code>age</code>: Age of the dog.</li>
+            <li><code>description</code>: Description of the dog.</li>
+        </ul>
+        <i>Response:</i> Returns a success message with a 200 status code or an error message with a 500 status code.</p>
+    </li>
+
+    <li>
+        <h4>/health</h4>
+        <p><i>Method:</i> GET<br>
+        <i>Description:</i> An endpoint for checking the health of the application.<br>
+        <i>Response:</i> JSON object indicating application status as "healthy" with a 200 status code.</p>
+    </li>
+</ol>
+
+
+
+    </main>
+
+        <footer>
+        <p>© 2024 Dog Adoption Web App Documentation</p>
+    </footer>
+</body>
+</html>
+

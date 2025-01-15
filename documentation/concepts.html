@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started - Dog Adoption Web App Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <header>
+        <h1>DAT515 Project - Dog Adoption Web Application Documentation</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="getting_started.html">Getting Started</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="flask_api.html">Flask Rest API</a>
+            <a href="react_frontend.html">React Frontend</a>
+            <a href="database.html">Database</a>
+            <a href="tests.html">Tests</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Concept</h2>
+        <p>This application is built using three primary components:</p>
+        <h3>Database</h3>
+        <p> A MySQL database serves as the application’s data store, with enhanced durability through the use of a persistent volume and persistent volume claim to ensure data is stored permanently and securely.</p>
+        <h3>Backend</h3>
+        <p>A Flask application operates as the backend, managing data exchange between the database and frontend. This component acts as the bridge, providing the communication between the data layer and user interface.</p>
+        <h3>Frontend</h3>
+        <p>The frontend is developed with HTML and React, and is served by an NGINX server. This component presents the dog adoption features, displays available dogs and provides a form for submitting new adoption requests.</p>
+        <h3>Overview</h3>
+        <p>Each component is encapsulated in its own Docker container, with dedicated Dockerfiles, Kubernetes deployments and services. Figure 3 provides an architectural overview, showing how these components interact. As illustrated, the Flask application manages communication between the frontend and the MySQL database, which uses a persistent volume and persistent volume claim for reliable data storage.</p>
+        <div style="display: flex;">
+            <div style="text-align: center;">
+                <img src="ui_example/docker_kubernetes_project.jpg" alt="overview" style="width: 50%;">
+                <figcaption>Fig.3 - Application Overview</figcaption>
+            </div>
+        </div>
+        <h3> Ports and Ip Address</h3>
+        <p>The following Table 1. summarizes the ports used by Kubernetes services to enable component communication. The IP address of our OpenStack machine serves as the base address, with NodePorts configured for both the backend and frontend, allowing access from outside the cluster, such as through a web browser.</p>
+        <table>
+  <tr>
+    <th>Component</th>
+    <th>Port</th>
+    <th>NodePort</th>
+    <th>TargetPort</th>
+  </tr>
+  <tr>
+    <td>MySQL Db</td>
+    <td>3306</td>
+    <td>X</td>
+    <td>3306</td>
+  </tr>
+  <tr>
+    <td>Flask Backend</td>
+    <td>3333</td>
+    <td>30003</td>
+    <td>2222</td>
+  </tr>
+  <tr>
+    <td>React Frontend</td>
+    <td>8080</td>
+    <td>30001</td>
+    <td>80</td>
+  </tr>
+</table>
+
+ <h3> Additional concepts</h3>
+ <p>Additional concepts implemented in this project, not depicted in the image, include storing sensitive information in secrets.csv, using DNS to resolve the host address of the database service, and configuring horizontal auto-scaling for the Flask backend via the flask_hpa file. </p>
+
+
+    </main>
+
+        <footer>
+        <p>© 2024 Dog Adoption Web App Documentation</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started - Dog Adoption Web App Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header>
+        <h1>DAT515 Project - Dog Adoption Web Application Documentation</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="getting_started.html">Getting Started</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="flask_api.html">Flask Rest API</a>
+            <a href="react_frontend.html">React Frontend</a>
+            <a href="database.html">Database</a>
+            <a href="tests.html">Tests</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tests </h2>
+        <p>This project includes both backend (Flask) and frontend (React) unit tests to ensure functionality and reliability across the API and UI. The following sections outline how to run these tests and provide a brief overview of what the tests cover.</p>
+        <h3>Flask API Unit Tests</h3>
+        <p>The Flask API tests validate the backend endpoints to ensure proper data retrieval, insertion, and error handling. </p>
+        <h4>Running Tests</h4>
+        <ol>
+            <li>In the flask_app directory run:
+                <pre><code>python -m unittest test_app.py</code></pre>
+                </li>
+        </ol>
+        <h4>Tests overview</h4>
+        <ol>
+            <li><i>/health endpoint:</i>Verifies that the health check endpoint returns a 200 OK status and a healthy status message.</li>
+            <li><i>/api/dogs endpoint:</i>Tests that dog data is fetched and formatted correctly, and validates error handling for failed database connections.</li>
+            <li><i>/api/adoption endpoint:</i> Checks successful form submission and database insertion for new dog entries, along with error handling for failed submissions.</li>
+        </ol>
+        <h3>Flask API Unit Tests</h3>
+        <p>The React tests validate frontend components using the @testing-library/react package, covering UI rendering, user interaction, and error handling within the application’s core components.</p>
+        <h4>Running Tests</h4>
+        <ol>
+            <li>In the react_frontend directory run:
+                <pre><code>npm test</code></pre>
+                </li>
+        </ol>
+        <h4>Tests overview</h4>
+        <ol>
+            <li><i>App Component Tests: </i>
+                <ul>
+                    <li>Located in App.test.js</li>
+                    <li>Tests main navigation rendering and default page content.</li>
+                </ul>
+            </li>
+            <li><i>DogCard Component Tests: </i>
+                <ul>
+                    <li>Located in DogCard.test.js</li>
+                    <li>Validates correct display of dog details: name, breed, age, and description.</li>
+                </ul>
+            </li>
+            <li><i>Form Component Tests: </i>
+                <ul>
+                    <li> Located in Form.test.js and FormInvalidInput.test.js</li>
+                    <li>Form.test.js: Covers successful form submission and error handling on submission failure.</li>
+                    <li>FormInvalidInput.test.js: Handles validation checks for required fields, and displays error messages for invalid email and phone formats.</li>
+                </ul>
+            </li>
+            <li><i>Homepage Component Tests: </i>
+                <ul>
+                    <li>Located in Homepage.test.js</li>
+                    <li>Checks data fetching, rendering of dog details, and error handling for data load failures.</li>
+                </ul>
+            </li>
+        </ol>
+
+
+    </main>
+
+        <footer>
+        <p>© 2024 Dog Adoption Web App Documentation</p>
+    </footer>
+</body>
+</html>
+

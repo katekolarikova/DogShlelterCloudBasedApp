@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started - Dog Adoption Web App Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>DAT515 Project - Dog Adoption Web Application Documentation</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="getting_started.html">Getting Started</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="flask_api.html">Flask Rest API</a>
+            <a href="react_frontend.html">React Frontend</a>
+            <a href="database.html">Database</a>
+            <a href="tests.html">Tests</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>React Frontend </h2>
+        <p>The React frontend provides an interactive user interface for viewing and adding dog adoptions. Users can browse available dogs or submit a form to offer a dog for adoption.</p>
+        <h3>Technologies</h3>
+        <ol>
+            <li><i>React:</i> core framework for building the UI.</li>
+            <li><i>Bootstrap:</i> library to provide styling and responsive layout.</li>
+        </ol>
+        <h3>Components</h3>
+        <ol>
+            <li><i>App:</i> The main application component that handles routing and renders the navigation bar that includes the links to the homepage and adoption form.</li>
+            <li><i>Homepage:</i> Fetches a list of dogs currently available for adoption from the API and uses a DogCard component to display each dog’s details.
+                <ul>
+                    <li><i>DogCard:</i> A reusable component that renders a dog’s name, breed, age, and description within a Bootstrap card layout.</li>
+                </ul>
+            </li>
+            <li><i>Form:</i> A submission form for dog adoptions, collecting both dog and owner details and submitting them to the backend API.</li>
+        </ol>
+
+        <h3>Routing</h3>
+        <ol>
+            <li><i>React Router:</i> Used to manage application routes:
+                <ul>
+                    <li><i>/</i>: Displays the Homepage component with a list of available dogs.</li>
+                    <li><i>/give_for_adoption</i>: Displays the Form component, allowing users to submit an adoption form.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>API Integration</h3>
+        <ol>
+            <li><i>GET /api/dogs (Homepage):</i>
+                <ul>
+                    <li>Used in the Homepage to display all dog records.</li>
+                    <li> Handles errors in fetching data and displays an error message if loading fails.</li>
+                </ul>
+            </li>
+            <li><i>POST /api/adoption (Form):</i>
+                <ul>
+                    <li>Used in Form to submit the adoption form data to the backend API.</li>
+                    <li>Provides feedback to the user based on the response, indicating success or failure.</li>
+                </ul>
+            </li>
+        </ol>
+    </main>
+
+        <footer>
+        <p>© 2024 Dog Adoption Web App Documentation</p>
+    </footer>
+</body>
+</html>
+

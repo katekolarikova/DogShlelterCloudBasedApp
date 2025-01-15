@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started - Dog Adoption Web App Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header>
+        <h1>DAT515 Project - Dog Adoption Web Application Documentation</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="getting_started.html">Getting Started</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="flask_api.html">Flask Rest API</a>
+            <a href="react_frontend.html">React Frontend</a>
+            <a href="database.html">Database</a>
+            <a href="tests.html">Tests</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Getting Started</h2>
+        <h3>Prerequisites</h3>
+        <p>This project uses Kubernetes and Docker as core technologies for application deployment and management. Before running the application, please ensure that both Docker and Kubernetes are installed on your system.</p>
+        <p>To install Docker, Docker Buildx (for building Docker images),  and Kubernetes, you can use the following commands</p>
+        <pre><code>sudo apt install docker.io
+sudo apt install docker-buildx
+sudo apt-mark hold kubelet kubeadm kubectl</code></pre>
+        <p>In addition, we utilize Kubernetes command-line tools such as kubectl and kubeadm for managing clusters. Kubectl is especially critical as it provides the necessary commands for running and interacting with the application on Kubernetes. Further installation guidance is available in the course description on <a href="https://github.com/dat515-2024/assignments">GitHub</a>.</p>
+        <h3>Application Setup</h3>
+        <p>To start, Docker images must be created for each application component and added to the Kubernetes folder. Ensure that the image tag (version) specified during the build process matches the tag referenced in the Flask app deployment configuration. Also do not forget to build all of the services, deployments and other crucial Kubernetes components.</p>
+        <ol>
+           <li>Navigate to the directory containing the Dockerfile for the application component.</li>
+           <li>Build and save the Docker image with the following commands:
+                <pre><code>sudo docker buildx build --output type=docker --tag &ltapp name&gt:&ltversion&gt  .
+docker save &ltapp_name&gt:&ltversion&gt -o &ltapp_name&gt.tar </code></pre>
+           </li>
+            <li>Import the Docker image to Kubernetes:</li>
+                <pre><code>sudo ctr -n=k8s.io images import &ltapp_name&gt.tar</code></pre>
+        </ol>
+        <p>To deploy Kubernetes</p>
+        <ol>
+            <li>Navigate to the directory containing Kubernetes deployment files.</li>
+            <li>Apply all deployment and service configurations with:</li>
+            <pre><code>kubectl apply -f .</code></pre>
+        </ol>
+    </main>
+    
+        <footer>
+        <p>© 2024 Dog Adoption Web App Documentation</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started - Dog Adoption Web App Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <header>
+        <h1>DAT515 Project - Dog Adoption Web Application Documentation</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="getting_started.html">Getting Started</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="flask_api.html">Flask Rest API</a>
+            <a href="react_frontend.html">React Frontend</a>
+            <a href="database.html">Database</a>
+            <a href="tests.html">Tests</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Project Overview</h2>
+        <p>This documentation provides information about the architecture and implementation of a web application designed for dog adoption and fostering. The important part of this implementation is using Docker and Kubernetes to efficiently manage and deploy the application and enhance its scalability, security, and workflow efficiency. This project was implemented as a part of course DAT515 Cloud Computing.</p>
+
+        <p>Our application consists of three primary components: a MySQL database, a Flask backend, and a React frontend served through Nginx. The MySQL database is configured with a persistent volume to ensure data durability. The Flask framework takes care of handling data between the frontend and database by providing a channel in the form of a REST API. The frontend, developed in React, provides an interface for users to browse available dogs for adoption, as well as submit new dog adoption requests through a web form.</p>
+
+            <p>By utilizing Docker containers, we encapsulate each component of our application, ensuring consistency across different development and production environments. Kubernetes manages these containers and adds important features such as scalability or enhancing the security.</p>
+        <div style="display: flex; gap: 10px;">
+            <div style="text-align: center;">
+                <img src="ui_example/ui_example.png" alt="User Interface Example" style="width: 100%;">
+                <figcaption>Fig.1 - Main Page</figcaption>
+            </div>
+            <div style="text-align: center;">
+                <img src="ui_example/ui_form.png" alt="User Interface Example" style="width: 100%;">
+                <figcaption>Fig.2 - Adoption Form</figcaption>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Dog Adoption Web App Documentation</p>
+    </footer>
+</body>
+</html>
+

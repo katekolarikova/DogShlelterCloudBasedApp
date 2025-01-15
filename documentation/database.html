@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started - Dog Adoption Web App Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <header>
+        <h1>DAT515 Project - Dog Adoption Web Application Documentation</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="getting_started.html">Getting Started</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="flask_api.html">Flask Rest API</a>
+            <a href="react_frontend.html">React Frontend</a>
+            <a href="database.html">Database</a>
+            <a href="tests.html">Tests</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Database </h2>
+        <p>The animals database is designed to store information about various animals, specifically focusing on dogs in this implementation. This database can be expanded in the future to include additional tables for other types of animals or related data.</p>
+        <h3>Description </h3>
+        <p><i>Database Nme</i>animals</p>
+        <p><i>Port:</i> 3306 (MySQL db)</p>
+        <p><i>Schema:</i> The database consists of a single table, <b>dogs</b>, which stores information on individual dogs, such as their ID, name, breed, age, and description.</p>
+        <p><i>Table:</i> dogs</p>
+        <p><i>Table Description:</i> The dogs table holds details about individual dogs, including each dog's unique ID, name, breed, age, and a brief description. This information can be used in applications like pet adoption platforms, veterinary databases, or animal shelters.</p>
+        <p><i>Table Overview:</i>
+            <table>
+                  <tr>
+                    <th>Column</th>
+                    <th>Data Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>dogID</td>
+                    <td>INT</td>
+                    <td>Unique identifier for each dog. </td>
+                  </tr>
+                  <tr>
+                    <td>name</td>
+                    <td>VARCHAR(20)</td>
+                    <td>The name of the dog.</td>
+                  </tr>
+                  <tr>
+                    <td>breed</td>
+                    <td>VARCHAR(40)</td>
+                    <td>The breed of the dog.</td>
+                  </tr>
+                  <tr>
+                    <td>age</td>
+                    <td>INT</td>
+                    <td>The age of the dog in years.</td>
+                  </tr>
+                  <tr>
+                    <td>description</td>
+                    <td>VARCHAR(400)</td>
+                    <td>A detailed description of the dog, especially personality.</td>
+                  </tr>
+            </table>
+        </p>
+        <p><i>Constraints:</i> dogID: not null, primary key, auto increment</p>
+            <p><i>Data Example:</i>
+            <table>
+                  <tr>
+                    <th>dogID</th>
+                    <th>name</th>
+                    <th>breed</th>
+                    <th>age</th>
+                    <th>description</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Rex</td>
+                    <td>German Shepherd</td>
+                    <td>4</td>
+                    <td>Suitable as a house sitter, does not get along with other animals.</td>
+                  </tr>
+                      <tr>
+                    <td>2</td>
+                    <td>Lisa</td>
+                    <td>American Pit Bull Terrier</td>
+                    <td>3</td>
+                    <td>Very friendly dog also suitable for children.</td>
+                  </tr>
+
+
+
+            </table>
+            </p>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Dog Adoption Web App Documentation</p>
+    </footer>
+</body>
+</html>
+

@@ -1,6 +1,6 @@
 # Cloud-Based Dog Shelter Website Using Docker and Kubernetes
 
-This document is part of a project developed for the DAT515 Cloud Computing Technologies course at the University of Stavanger. The project is represented by a webpage for a dog shelter, featuring functionalities such as listing available dogs and adding new ones.
+This document is part of a team project developed at the University of Stavanger. The project is represented by a webpage for a dog shelter, featuring functionalities such as listing available dogs and adding new ones.
 
 A key aspect of this implementation is the use of Docker and Kubernetes to efficiently manage and deploy the application, enhancing its scalability, security, and workflow efficiency. 
 
